@@ -12,7 +12,7 @@
  * @wordpress-plugin
  * Plugin Name: Import Users
  * Description: Seamlessly create users and import from your CSV data with ease. 
- * Version: 1.4.3
+ * Version: 1.5
  * Text Domain: Import-Users
  * Domain Path:	 /languages
  * Author: Smackcoders
@@ -47,12 +47,14 @@ require_once('importExtensions/BSIImport.php');
 require_once('importExtensions/ImportHelpers.php');
 require_once('importExtensions/BuddyImport.php');
 require_once('importExtensions/WPMembersImport.php');
+require_once('importExtensions/MultiroleImport.php');
+
 require_once('controllers/SendPassword.php');
 
 class UserCSVHandler extends UsersImport{
 
 	private static $instance = null,$install;
-	public $version = '1.4.2';
+	public $version = '1.5';
 
 	public function __construct(){ 
 		$this->plugin = Plugin::getInstance();
@@ -97,12 +99,8 @@ class UserCSVHandler extends UsersImport{
 	 */
 	public function init() {
 		if(is_admin()) :
-			// Init action.
 			do_action( 'uci_init' );
 		if(is_admin()) {
-#$this->includes();
-			//SmUCIUserAdminAjax::smuci_ajax_events();
-# Removed: De-Register the media sizes
 		}
 		endif;
 	}

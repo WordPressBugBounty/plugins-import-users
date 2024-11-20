@@ -133,7 +133,6 @@ class ImportHelpers {
 			$csv_value= trim($map[$key]);
 
 			if(!empty($csv_value)){
-				//if(preg_match_all('/{(\w+)}/', $csv_value, $matches)){
 				$pattern = "/({([a-z A-Z 0-9 | , _ -]+)(.*?)(}))/";
 				if(preg_match_all($pattern, $csv_value, $matches, PREG_PATTERN_ORDER)){	
 					$csv_element = $csv_value;
@@ -159,7 +158,6 @@ class ImportHelpers {
 					if(!empty($csv_element) && !empty($wp_element)){
 						$post_values[$wp_element] = $csv_element;
 					}
-					//}
 				}
 
 				elseif(!in_array($csv_value , $header_array)){
@@ -186,7 +184,7 @@ class ImportHelpers {
 
 		$result = 0;
 
-		// sanitize input
+		//input
 		$equation = preg_replace("/[^0-9+\-.*\/()%]/","",$equation);
 
 		// convert percentages to decimal

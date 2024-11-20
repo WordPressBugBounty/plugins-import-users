@@ -101,10 +101,13 @@ class UsersImport{
 
 			if ( is_wp_error( $retID ) ) {
 				$core_instance->detailed_log[$line_number]['Message'] = "Skipped, Due to duplicate User found with same email!.";
+				$core_instance->detailed_log[$line_number]['state'] = 'Skipped';
 				$fields = $wpdb->get_results("UPDATE $log_table_name SET skipped = $skipped_count WHERE hash_key = '$hash_key'");
 				return array('MODE' => $mode);
 			}
 			$core_instance->detailed_log[$line_number]['Message'] = 'Inserted User ID: ' . $retID;
+			$core_instance->detailed_log[$line_number]['state'] = 'Inserted';
+			$core_instance->detailed_log[$line_number]['id'] = $retID;
 			$fields = $wpdb->get_results("UPDATE $log_table_name SET created = $created_count WHERE hash_key = '$hash_key'");
 
 		} else {
@@ -119,6 +122,8 @@ class UsersImport{
 					$mode_of_affect = 'Updated';
 
 					$core_instance->detailed_log[$line_number]['Message'] = 'Updated User ID: ' . $retID;
+					$core_instance->detailed_log[$line_number]['state'] = 'Updated';
+					$core_instance->detailed_log[$line_number]['id'] = $retID;
 					$fields = $wpdb->get_results("UPDATE $log_table_name SET updated = $updated_count WHERE hash_key = '$hash_key'");
 
 				}else{
@@ -132,6 +137,8 @@ class UsersImport{
 						return array('MODE' => $mode);
 					}
 					$core_instance->detailed_log[$line_number]['Message'] = 'Inserted User ID: ' . $retID;
+					$core_instance->detailed_log[$line_number]['state'] = 'Inserted';
+					$core_instance->detailed_log[$line_number]['id'] = $retID;
 					$fields = $wpdb->get_results("UPDATE $log_table_name SET created = $created_count WHERE hash_key = '$hash_key'");
 				}
 			}
@@ -168,6 +175,9 @@ class UsersImport{
 				apply_filters('smack_csv_modify_metadata_filter', $retID, $meta_key, $meta_value);
 			}
 		}
+		$user_data = get_userdata($retID);
+		$user_title = isset($user_data) ? $user_data->display_name : '';
+		$core_instance->detailed_log[$line_number]['user_title'] = $user_title;
 		$core_instance->detailed_log[$line_number]['Email'] = $data_array['user_email'];
 		$core_instance->detailed_log[$line_number]['Role'] = $data_array['role'];
 		$ucisettings = get_option('sm_uci_pro_settings');

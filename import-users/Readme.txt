@@ -3,26 +3,26 @@ Contributors: smackcoders
 Donate link: https://www.paypal.me/smackcoders 
 Requires at least: 5.0
 Tested up to: 6.4.1
-Stable tag: 1.4.3
-Version: 1.4.3
+Stable tag: 1.5
+Version: 1.5
 Requires PHP: 5.2.4
 Author: smackcoders
 Author URI: http://profiles.wordpress.org/smackcoders/
-Tags: csv, customers, user export, user import, woocommerce
+Tags: csv, customers, user export, user import, woocommerce, import users
 License: GPLv2 or later
 
-Import users with meta details as CSV spreadsheet 
+Import users into your WordPress or WooCommerce site, including their metadata, using a CSV file.
 
 == Description ==
 
-Import users with meta details, custom fields, woocommerce shipping details etc., as CSV spreadsheet 
+Import users with meta details, custom fields, woocommerce shipping details etc., as CSV spreadsheet.
 
 = Highlights =
-* Import any number of user through CSV files only.
+* Import any number of user through CSV files easily.
 * Import Users with Default Custom Fields.
-* Import users with WP-Members.
+* Import Users with WP-Members, and MemberPress plugins data.
 * Import Users with Billing and Shipping Informations(BSI).
-* If user password column is empty we will create random password as well as send password through email
+* If a User password column is empty, the plugin will create random password as well as it sends the password to the user through email.
 
 = Other Useful Plugins & Addons By Smackcoders =
 
@@ -38,31 +38,34 @@ To know more about the premium bundled version, visit [WordPress Lead Form Data 
 
 = Helpful links =
 
-Visit [Smackcoders](https://www.smackcoders.com) to explore more WordPress products. You can write to us your comments, feedback at [support@smackcoders.com](mailto:support@smackcoders.com)
+Visit [Smackcoders](https://www.smackcoders.com/wordpress.html) to explore more WordPress products. You can write to us your comments, feedback at [support@smackcoders.com](mailto:support@smackcoders.com).
 
 
-Get to know about other WordPress addons and latest product update news at [www.smackcoders.com/blogs.html](https://www.smackcoders.com/blog/category/wordpress-products)
+Get to know about other WordPress addons and latest product update news at [www.smackcoders.com/blogs.html](https://www.smackcoders.com/blog/category/wordpress-products).
 
 
 
 == Installation ==
 
-1. First, install [CSV Importer & Exporter](https://wordpress.org/plugins/wp-ultimate-csv-importer/)
+1. First, install [CSV Importer & Exporter](https://wordpress.org/plugins/wp-ultimate-csv-importer/).
 2. Extract the Import-Users.zip in wordpress/wp-content/plugins using FTP or through plugin install in wp-admin.
 3. Activate the plugin in the WordPress plugin list.
 
 == Screenshots ==
 
-1.Upload section of CSV.
-2.Mapping view of the uploaded CSV fields with WordPress fields..
-3.Import Progress
+1. Upload section of CSV.
+2. Mapping view of the uploaded CSV fields with WordPress fields.
+3. Import Progress.
 
 
 == Frequently Asked Questions == 
-1. What user import can do?
-User import with all meta details can be imported using this addon like WooCommerce 
+1. What Users import can do?
+The Users can be imported along with all meta data using this addon. Please note, this add-on requires the parent plugin https://wordpress.org/plugins/wp-ultimate-csv-importer/ to be installed.
 
 == Changelog ==
+= 1.5 =
+* Added: Support for MemberPress Users data import/export.
+
 = 1.4.3 =
 * Resolved: Issue with PHP Notice error occurring when installing import-users plugin has been fixed.
 * Resolved: Fixed PHP Notice for Undefined index: user_pass iss
@@ -123,6 +126,9 @@ User import with all meta details can be imported using this addon like WooComme
 * Initial stable release version.
 
 == Upgrade Notice ==
+
+= 1.5 =
+* Upgrade now to enjoy the import/export compatibility for MemberPress plugin.
 
 = 1.4.3 =
 * upgrade for bug fixes
