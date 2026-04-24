@@ -2,9 +2,9 @@
 Contributors: smackcoders, riswanasmack, premairuthayarajan
 Donate link: https://www.paypal.me/smackcoders 
 Requires at least: 5.0
-Tested up to: 6.9
-Stable tag: 1.6
-Version: 1.6
+Tested up to: 7.0
+Stable tag: 1.7
+Version: 1.7
 Requires PHP: 7.4
 Author: smackcoders
 Author URI: https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html
@@ -231,6 +231,9 @@ Yes. You can add your google sheet url in the external urls source of upload int
 
 == Changelog ==
 
+= 1.7 =
+* Added: compatibility for WordPress 7.0
+
 = 1.6 =
 * Added: Compatibility with WordPress 6.9.
 * Added: Support for the Listeo theme, including import of profile meta fields such as phone, address, social links, and more.
@@ -298,6 +301,9 @@ Yes. You can add your google sheet url in the external urls source of upload int
 * Initial stable release version.
 
 == Upgrade Notice ==
+
+= 1.7 =
+This update ensures compatibility with WordPress 7.0. It is recommended for all users to update for smooth performance on the latest WordPress version.
 
 = 1.6 =
 This update adds compatibility with WordPress 6.9 and introduces full support for importing Listeo theme profile meta fields. Updating is recommended to ensure smooth imports and improved user data handling.
