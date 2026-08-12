@@ -12,7 +12,7 @@
  * @wordpress-plugin
  * Plugin Name: Import Users
  * Description: Seamlessly create users and import from your CSV data with ease. 
- * Version: 1.7
+ * Version: 2.0
  * Text Domain: Import-Users
  * Domain Path:	 /languages
  * Author: Smackcoders
@@ -39,22 +39,22 @@ namespace Smackcoders\SMUSERS;
 if ( ! defined( 'ABSPATH' ) )
 exit; // Exit if accessed directly
 
-require_once('SmackImportUserPlugin.php');
-require_once('SmackImportUserInstall.php');
-require_once('importExtensions/UsersImport.php');
-require_once('importExtensions/MediaHandling.php');
-require_once('importExtensions/BSIImport.php');
-require_once('importExtensions/ImportHelpers.php');
-require_once('importExtensions/BuddyImport.php');
-require_once('importExtensions/WPMembersImport.php');
-require_once('importExtensions/MultiroleImport.php');
+require_once __DIR__ . '/SmackImportUserPlugin.php';
+require_once __DIR__ . '/SmackImportUserInstall.php';
+require_once __DIR__ . '/importExtensions/UsersImport.php';
+require_once __DIR__ . '/importExtensions/MediaHandling.php';
+require_once __DIR__ . '/importExtensions/BSIImport.php';
+require_once __DIR__ . '/importExtensions/ImportHelpers.php';
+require_once __DIR__ . '/importExtensions/BuddyImport.php';
+require_once __DIR__ . '/importExtensions/WPMembersImport.php';
+require_once __DIR__ . '/importExtensions/MultiroleImport.php';
 
-require_once('controllers/SendPassword.php');
+require_once __DIR__ . '/controllers/SendPassword.php';
 
 class UserCSVHandler extends UsersImport{
 
 	private static $instance = null,$install;
-	public $version = '1.7';
+	public $version = '2.0';
 
 	public function __construct(){ 
 		$this->plugin = Plugin::getInstance();

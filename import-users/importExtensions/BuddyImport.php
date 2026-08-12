@@ -35,7 +35,7 @@ class BuddyImport extends UsersImport{
        
         global $wpdb;
         foreach($data_array as $data_key => $data_value) {
-            $get_buddy_fields = $wpdb->get_results($wpdb->prepare("select type , name from {$wpdb->prefix}bp_xprofile_fields where id= $data_key" ), ARRAY_A);
+            $get_buddy_fields = $wpdb->get_results($wpdb->prepare("select type , name from {$wpdb->prefix}bp_xprofile_fields where id= %d", absint($data_key) ), ARRAY_A);
             foreach($get_buddy_fields as $buddy_fields){
                 $field_type = $buddy_fields['type'];
                 if($field_type == 'multiselect_custom_post_type') 

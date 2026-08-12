@@ -300,7 +300,7 @@ class ImportHelpers {
 		$response = [];
 		global $wpdb;
 		$log_table_name = $wpdb->prefix ."import_detail_log";
-		$get_data =  $wpdb->get_results("SELECT skipped , created , updated FROM $log_table_name WHERE hash_key = '$hash_key' ");
+		$get_data =  $wpdb->get_results($wpdb->prepare("SELECT skipped , created , updated FROM $log_table_name WHERE hash_key = %s", $hash_key));
 		$skipped = $get_data[0]->skipped;
 		$response['skipped'] = $skipped + 1;
 		$created = $get_data[0]->created;

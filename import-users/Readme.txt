@@ -1,25 +1,34 @@
-=== User Import with meta - WP Ultimate CSV Importer Add-on ===
-Contributors: smackcoders, riswanasmack, premairuthayarajan
+=== Import Users & Customers with Meta | WP Ultimate CSV Importer Add-on ===
+Contributors: smackcoders, premairuthayarajan
 Donate link: https://www.paypal.me/smackcoders 
 Requires at least: 5.0
 Tested up to: 7.0
-Stable tag: 1.7
-Version: 1.7
+Stable tag: 2.0
+Version: 2.0
 Requires PHP: 7.4
 Author: smackcoders
 Author URI: https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html
-Tags: user import, csv import, user meta import, import users, bulk user import, woocommerce users, customer import, custom fields import, membership import, wp members import, memberpress import, spreadsheet import, user export, user profile import, csv, customers, woocommerce
+Tags: import users, user import, bulk user import, import users from csv, wordpress user import, user meta import, import user meta wordpress, woocommerce customer import, user import with meta, wordpress user csv import, user export, memberpress import, buddypress import, membership import
 License: GPLv2 or later
 
-Import and export WordPress and WooCommerce users with full user meta, custom fields, billing & shipping details, and membership data. Supports CSV, XML, Excel, and TSV files.
+Bulk import and export WordPress users and WooCommerce customers with full user meta, custom fields, billing & shipping details, and membership data — to and from CSV, XML, Excel, or Google Sheets. An add-on for WP Ultimate CSV Importer.
 
 == Description ==
 
-The **User Import with Meta Add-on** extends the powerful WP Ultimate CSV Importer plugin to help you manage WordPress users and WooCommerce customers at scale. Whether you're migrating from another site, importing customers, or onboarding large user lists, this add-on gives you complete control over user profiles.
+Migrating users to a new WordPress site, onboarding a customer database into WooCommerce, or managing members across a membership platform — all of it requires moving user data at scale, accurately and without duplicates. The **Import Users & Customers with Meta Add-on** makes this straightforward.
 
-It supports importing data from various sources such as your computer, external URLs, cloud platforms like Google Sheets or Dropbox, FTP/SFTP locations.
+This add-on extends [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/) — the free parent plugin — to support bulk WordPress user import and WooCommerce customer import from CSV, XML, Excel, TSV, and Google Sheets files. It handles standard WordPress user fields, user meta, WooCommerce billing and shipping details, and profile data from popular membership plugins including **WP-Members**, **MemberPress**, **BuddyPress**, and the **Listeo** theme.
 
-This add-on allows you to import not only the standard WordPress user fields but also user meta, custom profile data, WooCommerce billing and shipping details, as well as metadata from popular membership plugins like **WP-Members** and **MemberPress**, making it ideal for eCommerce stores, membership sites, LMS platforms, and large business websites.
+It also includes a full user export system, so you can export WordPress users and WooCommerce customers to CSV, XML, XLS, XLSX, JSON, or TSV.
+
+**This add-on requires the free [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/) plugin.** It is part of a complete data management ecosystem for WordPress and WooCommerce:
+
+* **[WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/)** (Free, required) — Import posts, pages, custom post types, and more.
+* **Import Users & Customers with Meta** (This plugin) — Bulk import and export WordPress users and WooCommerce customers with full meta support.
+* **[Import WooCommerce Suite](https://wordpress.org/plugins/import-woocommerce/)** — Import WooCommerce products, orders, coupons, and reviews.
+* **[WP Ultimate Exporter](https://wordpress.org/plugins/wp-ultimate-exporter)** — Export any WordPress or WooCommerce data to CSV, XML, or other formats.
+
+Install just what you need, or use all four together for a complete import/export solution.
 
 == Key Features ==
 
@@ -49,6 +58,7 @@ Bring in new users with:
 Seamlessly import profile data for:
 - WP-Members  
 - MemberPress  
+- BuddyPress  
 
 **Automatic Password Handling**
 If your CSV (or other import file) doesn't include a password, the plugin generates a secure one and automatically emails it to the user.
@@ -99,6 +109,17 @@ Review your user data before downloading to ensure accuracy.
 **One-Click User Migration**
 Move users between sites seamlessly with the one-click import & migrate feature. 
 
+
+== Use Cases ==
+
+* **Migrate users from another WordPress site** — Export users from your old site and bulk import them into your new one, including all meta fields and roles.
+* **Import WooCommerce customers** — Bring in a customer database with billing addresses, shipping addresses, phone numbers, and notes in one import run.
+* **Onboard members from a spreadsheet** — Import a list of new members into WP-Members, MemberPress, or BuddyPress from a CSV or Excel file.
+* **Sync users from an external system** — Import user data from a CRM, LMS, or HR system exported as CSV or Google Sheets.
+* **Import users after a platform switch** — Moving from Shopify, Magento, or another CMS? Import your customer list directly into WooCommerce.
+* **Bulk update user roles or meta** — Use update mode (PRO) to change roles, update profile fields, or assign membership levels across hundreds of users at once.
+* **Migrate membership site data** — Import MemberPress or WP-Members subscriber data including subscription levels and profile fields.
+* **Export users for backup or audit** — Export your full WordPress user database or WooCommerce customer list to CSV, Excel, or JSON at any time.
 
 == How It Works ==
 
@@ -213,23 +234,43 @@ Get to know about other WordPress addons and latest product update news at [www.
 
 == Frequently Asked Questions ==
 
-= Do I need WP Ultimate CSV Importer installed? =  
-Yes. This add-on works only with the parent plugin [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/).
+= Do I need WP Ultimate CSV Importer installed? =
+Yes. This add-on works only with the free parent plugin [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/). Install and activate it first.
 
-= Can I import WooCommerce billing and shipping fields? =  
-Yes. All WooCommerce customer fields are supported.
+= How do I bulk import WordPress users from CSV? =
+Prepare a CSV file with your user fields (username, email, role, user meta, etc.), then go to Ultimate CSV Importer → Import. Upload your file, select "Users" as the post type, map your columns to the corresponding WordPress user fields using the drag-and-drop interface, and click Import. The plugin processes large files in iterations to prevent server timeouts.
 
-= Can I import custom meta fields? =  
-Absolutely. But only custom field created with WordPress default can be imported. You can check out [WP Ultimate CSV Importer pro plugin](https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html?utmsource=web&utmcampaign=readme&utmmedium=wporg) if you use other custom fields plugin.
+= Can I import WooCommerce customers with billing and shipping details? =
+Yes. All WooCommerce customer fields are supported, including billing name, billing address, billing city, billing country, shipping address, phone number, and customer notes. Map these fields in the import screen and they will be populated on the WooCommerce customer profile.
 
-= Is it possible to update existing users? =  
-Yes, but you require WP Ultimate CSV Importer pro to update users and customers data.
+= Can I import WordPress user meta fields? =
+Yes. Standard WordPress user meta fields are supported. For custom meta fields created with third-party plugins, the PRO version of WP Ultimate CSV Importer supports extended custom field compatibility.
 
-= Can I import users data from Google Sheets? =  
-Yes. You can add your google sheet url in the external urls source of upload interface. Ensure the url is publicly accessible before processing the import.
+= Can I import users from Google Sheets? =
+Yes. Paste your publicly accessible Google Sheet URL into the external URL field in the import screen. Make sure the sheet is set to "Anyone with the link can view" before running the import.
+
+= Is it possible to update existing users without creating duplicates? =
+Update mode (modifying existing users by email without creating duplicates) requires the [WP Ultimate CSV Importer Pro plugin](https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html). The free add-on supports fresh imports with duplicate detection by email.
+
+= Can I import MemberPress or WP-Members data? =
+Yes. The add-on supports importing profile data for both MemberPress and WP-Members users, including membership levels and custom profile fields.
+
+= Can I import BuddyPress profile fields? =
+Yes. BuddyPress extended profile fields are supported from version 1.4 onwards.
+
+= What file formats are supported? =
+CSV, XML, Excel (XLS/XLSX), TSV, Google Sheets, and ZIP files containing structured data are all supported for both import and export.
 
 
 == Changelog ==
+
+= 2.0 =
+* Improved: Aligned with WP Ultimate CSV Importer 9.0.
+* Fixed: An SQL injection vulnerability and hardened database queries across user import and export operations.
+
+= 1.7.1 =
+* Added PHP 8.3 compatibility support
+* Fixed minor bugs and stability issues
 
 = 1.7 =
 * Added: compatibility for WordPress 7.0
@@ -302,62 +343,6 @@ Yes. You can add your google sheet url in the external urls source of upload int
 
 == Upgrade Notice ==
 
-= 1.7 =
-This update ensures compatibility with WordPress 7.0. It is recommended for all users to update for smooth performance on the latest WordPress version.
+= 2.0 =
+Aligned with WP Ultimate CSV Importer 9.0. Update the core plugin to get the redesigned interface, Pre-Flight Validation, and Auto Recovery for user imports.
 
-= 1.6 =
-This update adds compatibility with WordPress 6.9 and introduces full support for importing Listeo theme profile meta fields. Updating is recommended to ensure smooth imports and improved user data handling.
-
-= 1.5 =
-* Upgrade now to enjoy the import/export compatibility for MemberPress plugin.
-
-= 1.4.3 =
-* upgrade for bug fixes
-
-= 1.4.2 =
-* upgrade now to get complete WordPress 6.4.1 compatibility.
-
-= 1.4.1 =
-* upgrade now to get complete WordPress 6.3.1 compatibility.
-
-= 1.4 =
-* upgrade now to get complete WordPress 6.2 compatibility.
-
-= 1.3 =
-* Upgrade for latest changes
-
-= 1.2.9 =
-* Upgrade for latest changes
-
-= 1.2.8 =
-* Upgrade for latest changes
-
-= 1.2.7 =
-* Upgrade for latest changes
-
-= 1.2.6 =
-* Upgrade for latest changes
-
-= 1.2.5 =
-* Upgrade for latest changes
-
-= 1.2.4 =
-* Upgrade for latest changes
-
-= 1.2.3 =
-* Upgrade for latest changes
-
-= 1.2.2 =
-* Upgrade for latest changes
-
-= 1.2.1 =
-* Minor upgrade with improvements
-
-= 1.2 =
-* Upgrade now for latest 6.0 changes
-
-= 1.1 =
-* Upgrade now for WordPress 4.8.1 compatibility.
-
-= 1.0.0 =
-* Initial release of plugin.

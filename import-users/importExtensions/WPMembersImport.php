@@ -10,7 +10,7 @@ namespace Smackcoders\SMUSERS;
 if ( ! defined( 'ABSPATH' ) )
 exit; // Exit if accessed directly
 
-require_once('MediaHandling.php');
+require_once __DIR__ . '/MediaHandling.php';
 
 class WPMembersImport extends UsersImport {
 	private static $wpmembers_instance = null,$media_instance;
