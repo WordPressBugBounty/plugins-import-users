@@ -3,23 +3,25 @@ Contributors: smackcoders, premairuthayarajan
 Donate link: https://www.paypal.me/smackcoders 
 Requires at least: 5.0
 Tested up to: 7.0
-Stable tag: 2.0
-Version: 2.0
+Stable tag: 2.1
+Version: 2.1
 Requires PHP: 7.4
 Author: smackcoders
 Author URI: https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html
-Tags: import users, user import, bulk user import, import users from csv, wordpress user import, user meta import, import user meta wordpress, woocommerce customer import, user import with meta, wordpress user csv import, user export, memberpress import, buddypress import, membership import
+Tags: import users, user import, import users from csv, wordpress user import, user meta import, import user meta wordpress, woocommerce customer import, user import with meta, wordpress user csv import, user export, memberpress import, buddypress import, membership import
 License: GPLv2 or later
 
-Bulk import and export WordPress users and WooCommerce customers with full user meta, custom fields, billing & shipping details, and membership data — to and from CSV, XML, Excel, or Google Sheets. An add-on for WP Ultimate CSV Importer.
+Import export WordPress users and WooCommerce customers with user meta, custom fields, billing & shipping details, and membership data.
 
 == Description ==
 
 Migrating users to a new WordPress site, onboarding a customer database into WooCommerce, or managing members across a membership platform — all of it requires moving user data at scale, accurately and without duplicates. The **Import Users & Customers with Meta Add-on** makes this straightforward.
 
-This add-on extends [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/) — the free parent plugin — to support bulk WordPress user import and WooCommerce customer import from CSV, XML, Excel, TSV, and Google Sheets files. It handles standard WordPress user fields, user meta, WooCommerce billing and shipping details, and profile data from popular membership plugins including **WP-Members**, **MemberPress**, **BuddyPress**, and the **Listeo** theme.
+This add-on extends [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/) — the free parent plugin to support bulk WordPress user import and WooCommerce customer import from CSV, XML, Excel, TSV, and Google Sheets files. It handles standard WordPress user fields, user meta, WooCommerce billing and shipping details, and profile data from popular membership plugins including **WP-Members**, **MemberPress**, **BuddyPress**, and the **Listeo** theme.
 
 It also includes a full user export system, so you can export WordPress users and WooCommerce customers to CSV, XML, XLS, XLSX, JSON, or TSV.
+
+[youtube https://www.youtube.com/watch?v=pK2lKrNEnkQ&feature=youtu.be]
 
 **This add-on requires the free [WP Ultimate CSV Importer](https://wordpress.org/plugins/wp-ultimate-csv-importer/) plugin.** It is part of a complete data management ecosystem for WordPress and WooCommerce:
 
@@ -264,6 +266,10 @@ CSV, XML, Excel (XLS/XLSX), TSV, Google Sheets, and ZIP files containing structu
 
 == Changelog ==
 
+= 2.1 =
+* Fixed: User and BuddyPress media imports reject files with executable extensions (e.g. .php, .phtml).
+* Fixed: BuddyPress file fields store a sanitized file name and only accept known file types.
+
 = 2.0 =
 * Improved: Aligned with WP Ultimate CSV Importer 9.0.
 * Fixed: An SQL injection vulnerability and hardened database queries across user import and export operations.
@@ -343,6 +349,8 @@ CSV, XML, Excel (XLS/XLSX), TSV, Google Sheets, and ZIP files containing structu
 
 == Upgrade Notice ==
 
+= 2.1 =
+Security update for media imports. Update alongside WP Ultimate CSV Importer 9.2. Recommended for all users.
+
 = 2.0 =
 Aligned with WP Ultimate CSV Importer 9.0. Update the core plugin to get the redesigned interface, Pre-Flight Validation, and Auto Recovery for user imports.
-

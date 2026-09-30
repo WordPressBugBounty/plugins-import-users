@@ -67,12 +67,16 @@ class BuddyImport extends UsersImport{
                     $image_name = $data_value;
                     $upload_path = wp_upload_dir(); 
                     $path =  $upload_path['basedir'].'/bpxcftr-profile-uploads/'.$uID.'/image';
-                    $base_name=basename($image_name);
+                    $base_name = sanitize_file_name(basename((string) wp_parse_url($image_name, PHP_URL_PATH)));
+                    $file_type = wp_check_filetype($base_name);
+                    if (empty($file_type['type']) || strpos($file_type['type'], 'image/') !== 0) {
+                        continue 2;
+                    }
                     wp_mkdir_p($path);
                     $data = file_get_contents($image_name);
                     $new = $path.'/'.$base_name;
                     file_put_contents($new, $data); 
-                    $image_path = "bpxcftr-profile-uploads/$uID/image/".basename($image_name);
+                    $image_path = "bpxcftr-profile-uploads/$uID/image/".$base_name;
                     $data_value = $image_path; 
                 }
                 elseif($field_type == 'file')
@@ -80,12 +84,16 @@ class BuddyImport extends UsersImport{
                     $file_name = $data_value;
                     $upload_path = wp_upload_dir(); 
                     $path =  $upload_path['basedir'].'/bpxcftr-profile-uploads/'.$uID.'/file';
-                    $base_name=basename($file_name);
+                    $base_name = sanitize_file_name(basename((string) wp_parse_url($file_name, PHP_URL_PATH)));
+                    $file_type = wp_check_filetype($base_name);
+                    if (empty($file_type['type'])) {
+                        continue 2;
+                    }
                     wp_mkdir_p($path);
                     $data = file_get_contents($file_name);
                     $new = $path.'/'.$base_name;
                     file_put_contents($new, $data);  
-                    $file_path = "bpxcftr-profile-uploads/$uID/file/".basename($file_name);
+                    $file_path = "bpxcftr-profile-uploads/$uID/file/".$base_name;
                     $data_value = $file_path;
                 }
             } 
